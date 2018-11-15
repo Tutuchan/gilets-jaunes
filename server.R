@@ -4,7 +4,8 @@ server <- function(input, output, session) {
       data = dt,
       options = list(
         searching = FALSE,
-        lengthChange= FALSE
+        lengthChange= FALSE,
+        scrollX = TRUE
         )
       )
   })

@@ -19,7 +19,7 @@ parse_description <- function(x) {
   }
 }
 
-rassemblements$URL <- vapply(rassemblements$Description, parse_description, character(1))
+rassemblements$URL <- vapply(rassemblements$description, parse_description, character(1))
 urls <- paste0("<a href='", rassemblements$URL, "' target=_blank>Facebook group</a>")
 urls[rassemblements$URL == ""] <- ""
 rassemblements$popup <- paste(rassemblements$Name, urls, sep = "<br>")
